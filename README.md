@@ -45,7 +45,7 @@ vm.vfs_cache_pressure=50
 Необходимо создать нового пользователя, чтобы использовать его вместо пользователя root.
 
 ```bash
-useradd -m -s/bin/bash johndoe
+useradd -m -s/bin/bash muhammad
 ```
 
 - `-m` - создать домашнюю директорию для пользователя
@@ -54,13 +54,13 @@ useradd -m -s/bin/bash johndoe
 Изменить пароль для созданного пользователя:
 
 ```bash
-passwd johndoe
+passwd muhammad
 ```
 
 Сделать пользователя sudoer:
 
 ```bash
-usermod -aG sudo johndoe
+usermod -aG sudo muhammad
 ```
 
 Добавить публичный ключ созданному пользователю.
@@ -122,7 +122,7 @@ sudo htpasswd -c /etc/nginx/htpasswd/mysite <username>
 Настроить перезагрузку сервиса PHP без sudo (для Deployer). Для этого нужно созать файл `<username>-restart-php` (например, `johndoe-restart-php`) в папке `/etc/sudoers.d`:
 
 ```php
-johndoe ALL=(ALL) NOPASSWD:/usr/sbin/service php8.0-fpm restart
+muhammad ALL=(ALL) NOPASSWD:/usr/sbin/service php8.0-fpm restart
 ```
 
 Не забудьте заменить версию PHP, если версия отличается.
@@ -135,19 +135,19 @@ johndoe ALL=(ALL) NOPASSWD:/usr/sbin/service php8.0-fpm restart
 version: 1.4
 
 prefs:
-    logPath: /home/johndoe/jobber.log
+    logPath: /home/muhammad/jobber.log
 
 jobs:
     daily_database_backup:
-        cmd: php /home/johndoe/database-backup-manager/backup.php > /home/user/database-backup-manager/daily-backups.log
+        cmd: php /home/muhammad/database-backup-manager/backup.php > /home/user/database-backup-manager/daily-backups.log
         time: 0 30 0 * * *
 
     renew_ssl_certificates:
-        cmd: bash /home/johndoe/certbot/renew-certificate.sh
+        cmd: bash /home/muhammad/certbot/renew-certificate.sh
         time: 0 0 10 * * *
 
     run_scheduler:
-        cmd: php /home/johndoe/websites/my-site/current/artisan schedule:run >> /dev/null 2>&1
+        cmd: php /home/muhammad/websites/my-site/current/artisan schedule:run >> /dev/null 2>&1
         time: 0 */1 * * * *
 ```
 
@@ -156,6 +156,8 @@ chmod 755 .jobber
 ```
 
 ## База данных
+
+Лучше использовать какой-нибудь DBaaS (Database-as-a-Service), типа [Amazon RDS](https://aws.amazon.com/ru/rds/) или [Digital Ocean Managed Databases](https://www.digitalocean.com/products/managed-databases/), но если все же возникла необходимость настроить что-то свое, можно воспользоваться инструкциями ниже.
 
 Изменить пароль для пользователя postgres
 
@@ -170,13 +172,13 @@ ALTER USER postgres PASSWORD 'new_strong_password';
 Создать отдельного пользователя PostgreSQL.
 
 ```sql
-CREATE USER johndoe WITH PASSWORD '123456';
+CREATE USER muhammad WITH PASSWORD '123456';
 ```
 
 Создать БД:
 
 ```sql
-CREATE DATABASE mydb OWNER johndoe;
+CREATE DATABASE mydb OWNER muhammad;
 ```
 
 Создать отдельную схему, чтобы использовать ее вместо public:
