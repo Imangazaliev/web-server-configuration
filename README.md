@@ -77,13 +77,11 @@ usermod -aG sudo johndoe
     - `sudo apt install software-properties-common`
     - `sudo add-apt-repository ppa:ondrej/php`
 - nginx
-- PostgreSQL 12 (если не используется managed databases)
+- PostgreSQL (если не используется managed database)
 - net-tools (для команды netstat)
 - Node.js (с помощью [nodesource.com](http://nodesource.com/))
     - [https://github.com/nodesource/distributions#installation-instructions](https://github.com/nodesource/distributions#installation-instructions)
 - Composer
-
-[https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/](https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/)
 
 Удалить Apache
 
