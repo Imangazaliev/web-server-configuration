@@ -215,7 +215,7 @@ sudo ufw delete 1
 
 ## Опционально
 
-- Установить adminer
+- Установить [adminer](https://www.adminer.org/)
 - Установить PgBouncer
 - Настроить бэкапы
 - Настроить UpTime Monitor
