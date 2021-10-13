@@ -65,7 +65,11 @@ usermod -aG sudo muhammad
 
 Изменить привествие терминала в `.bashrc` (`PS1`), как описано выше.
 
-Добавить публичный ключ созданному пользователю.
+[Сгенерировать публичный ключ](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) для созданного пользователя:
+
+```bash
+ssh-keygen
+```
 
 ## Установка и настройка ПО
 
