@@ -63,6 +63,12 @@ passwd muhammad
 usermod -aG sudo muhammad
 ```
 
+Переключить на созданного пользователя:
+
+```bash
+sudo su muhammad
+```
+
 Изменить привествие терминала в `.bashrc` (`PS1`), как описано выше.
 
 [Сгенерировать публичный ключ](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) для созданного пользователя:
