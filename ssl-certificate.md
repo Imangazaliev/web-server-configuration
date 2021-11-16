@@ -5,14 +5,14 @@
 Выжимка из [документации](https://certbot.eff.org/instructionshttps://certbot.eff.org/docs/using.html) (Ubuntu 20.04 + nginx):
 
 ```bash
-sudo snap install --classic certbot
-sudo ln -s /snap/bin/certbot /usr/bin/certbot
+$ sudo snap install --classic certbot
+$ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
 ## Создание сертификата
 
 ```bash
-certbot --nginx -d example.com
+$ certbot --nginx -d example.com
 ```
 
 ## Сертификат для всех поддоменов (wildcard)
@@ -22,13 +22,13 @@ certbot --nginx -d example.com
 Прежде всего необходимо установить плагин для вашего провайдера DNS:
 
 ```bash
-sudo snap install certbot-dns-digitalocean
+$ sudo snap install certbot-dns-digitalocean
 ```
 
 Создайте файл `certbot-digitalocean.ini` с токеном API DigitalOcean и установите на него права с помощью следующей команды:
 
 ```bash
-chmod 600
+$ chmod 600
 ```
 
 Затем создайте файл `create-certificate.sh`:
@@ -46,8 +46,8 @@ certbot certonly \
 Осталось дать права на выполнение файла и запустить его:
 
 ```bash
-chmod +x create-certificate.sh
-./create-certificate.sh
+$ chmod +x create-certificate.sh
+$ ./create-certificate.sh
 ```
 
 ### Ссылки
@@ -80,5 +80,5 @@ certbot renew \
 Не забудьте дать права на выполнение файла:
 
 ```bash
-chmod +x renew-certificate.sh
+$ chmod +x renew-certificate.sh
 ```
