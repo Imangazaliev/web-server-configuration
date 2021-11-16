@@ -21,7 +21,7 @@ apt dist-upgrade
 apt autoremove
 ```
 
-Изменить порт SSH в файле `/etc/ssh/sshd_config` (значение Port).
+Изменить порт SSH в файле `/etc/ssh/sshd_config` (значение Port) и перезапустите сервис SSH.
 
 Изменить пароль для пользователя root с помощью команды `passwd`.
 
