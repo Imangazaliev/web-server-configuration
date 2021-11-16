@@ -90,6 +90,8 @@ ssh-keygen
     - `sudo add-apt-repository ppa:ondrej/php`
 - nginx
 - PostgreSQL (если не используется managed database)
+- build-essential (команда make)
+- Redis (key-value хранилище для сессий, кеша и множества других вещей)
 - net-tools (для команды netstat)
 - Node.js (с помощью [nodesource.com](http://nodesource.com/))
     - [https://github.com/nodesource/distributions#installation-instructions](https://github.com/nodesource/distributions#installation-instructions)
