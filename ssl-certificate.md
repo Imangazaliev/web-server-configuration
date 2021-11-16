@@ -12,7 +12,7 @@ sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ## Создание сертификата
 
 ```bash
-certbot --nginx -d [example.com](http://example.com/)
+certbot --nginx -d example.com
 ```
 
 ## Сертификат для всех поддоменов (wildcard)
@@ -43,10 +43,11 @@ certbot certonly \
   -d *.domain.com
 ```
 
-Теперь нужно дать права на выполнение файла:
+Осталось дать права на выполнение файла и запустить его:
 
 ```bash
 chmod +x create-certificate.sh
+./create-certificate.sh
 ```
 
 ### Ссылки
