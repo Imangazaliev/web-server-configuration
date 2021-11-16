@@ -224,6 +224,7 @@ sudo ufw delete 1
 
 - Установить и настроить Deployer.
     - `sudo apt-get install acl`
+    - Создать файл в `/etc/sudoers.d` (например, `muhammad-restart-php`) с со следующей строкой: `muhammad ALL=(ALL) NOPASSWD:/usr/sbin/service php8.0-fpm restart`, чтобы при перезапуске PHP FPM Deployer'ом не запрашивался пароль пользователя
     - [https://github.com/deployphp/deployer/issues/1118](https://github.com/deployphp/deployer/issues/1118)
 - Настроить Supervisor для запуска очереди Laravel ([https://laravel.com/docs/7.x/queues#supervisor-configuration](https://laravel.com/docs/7.x/queues#supervisor-configuration)).
 
