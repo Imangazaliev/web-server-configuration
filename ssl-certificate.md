@@ -1,5 +1,7 @@
 В данной инструкции объясняется, как создать SSL-сертификат для домена (доменов) с помощью [Certbot](https://certbot.eff.org/).
 
+Для создания самоподписанного (self-signed) сертификата, используйте [этот](https://github.com/lstellway/self-signed-ssl) скрипт или [acert](https://github.com/lstellway/acert).
+
 ## Установка
 
 Выжимка из [документации](https://certbot.eff.org/instructionshttps://certbot.eff.org/docs/using.html) (Ubuntu 20.04 + nginx):
