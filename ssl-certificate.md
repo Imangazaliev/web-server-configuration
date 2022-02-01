@@ -1,6 +1,10 @@
 В данной инструкции объясняется, как создать SSL-сертификат для домена (доменов) с помощью [Certbot](https://certbot.eff.org/).
 
-Для создания самоподписанного (self-signed) сертификата, используйте [этот](https://github.com/lstellway/self-signed-ssl) скрипт или [acert](https://github.com/lstellway/acert).
+Для создания самоподписанного (self-signed) сертификата, используйте [этот](https://github.com/lstellway/self-signed-ssl) скрипт или [acert](https://github.com/lstellway/acert). Созданный сертификат нужно добавить в список доверенных сертификатов в хроме:
+
+1. Откройте раздел сертификатов в настройках: `chrome://settings/certificates` (`Chrome settings > Security > Manage certificates`).
+2. Откройте вкладку "Authorities".
+3. Нажмите "Import" и укажите созданный файл certificate authority.
 
 ## Установка
 
