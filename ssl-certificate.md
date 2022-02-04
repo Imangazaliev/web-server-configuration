@@ -25,7 +25,7 @@ $ certbot --nginx -d example.com
 
 Чтобы не получать сертификаты отдельно для каждого поддомена, можно настроить сертификат для всех поддоменов. Certbot позволяет сделать это, если использовать получение сертификата через DNS.
 
-Прежде всего необходимо установить плагин для вашего провайдера DNS:
+Прежде всего необходимо установить плагин для вашего провайдера DNS. Например, для DigitalOcean это [certbot-dns-digitalocean](https://certbot-dns-digitalocean.readthedocs.io/en/stable/):
 
 ```bash
 $ sudo snap install certbot-dns-digitalocean
